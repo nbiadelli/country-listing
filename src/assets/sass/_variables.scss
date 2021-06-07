@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap");
+
+$font-family-sans-serif: "Nunito Sans", sans-serif;
+$font-size-homepage: 14px;
+$font-size-detail: 16px;
+$line-height-base: 1.6;
+$weights300: 300;
+$weights600: 600;
+$weights800: 800;
+
+$widthMobile: 375px;
+$widthDesktop: 1440px;
+
+$lightBlue: hsl(209, 23%, 22%);
+$mediumBlue: hsl(200, 15%, 8%);
+$darkBlue: hsl(200, 15%, 8%);
+$lightGray: hsl(0, 0%, 98%);
+$mediumGray: hsl(0, 0%, 52%);
+$white: hsl(0, 0%, 100%);
+
+:root {
+  --body-bg: hsl(0, 0%, 98%);
+  --body-color: hsl(200, 15%, 8%);
+}
+
+.dark-mode:root {
+  --body-bg: hsl(200, 15%, 8%);
+  --body-color: hsl(0, 0%, 100%);
+}

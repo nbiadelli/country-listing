@@ -1,18 +1,35 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <InputSearch />
+    <ListCountry />
+    {{filterInput.length}}
+    <pre>{{filterSelect}}</pre>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
+import { mapGetters } from "vuex";
+import InputSearch from "@/components/InputSearch.vue";
+import ListCountry from "@/components/ListCountry.vue";
 
 export default {
   name: "Home",
   components: {
-    HelloWorld,
+    InputSearch,
+    ListCountry,
+  },
+  computed: {
+    ...mapGetters({ filterInput: "filterInput" }),
+    ...mapGetters({ filterSelect: "filterSelect" }),
   },
 };
 </script>
+
+<style lang="scss" scoped>
+@import "../assets/sass/_variables.scss";
+
+.home {
+  height: 100%;
+}
+</style>
