@@ -99,7 +99,7 @@ export default {
 
     input {
       width: 350px;
-      @media screen  and (max-width: 1440px) {
+      @media screen and (max-width: 1440px) {
         min-width: 150px;
         width: 262px;
         margin-bottom: 10px;
