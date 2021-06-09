@@ -79,7 +79,7 @@ export default {
   padding-top: 20px;
 
   @media screen and (max-width: 1440px) {
-    grid-template-columns: repeat(auto-fit, minmax(267px, 2fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
   }
   margin-left: 10px;
 
@@ -99,7 +99,8 @@ export default {
 
     input {
       width: 350px;
-      @media screen and (min-width: 375px) and (max-width: 1440px) {
+      @media screen  and (max-width: 1440px) {
+        min-width: 150px;
         width: 262px;
         margin-bottom: 10px;
       }
@@ -133,7 +134,7 @@ export default {
     padding: 10px;
     float: right;
     margin-right: 25px;
-    @media screen and (min-width: 375px) and (max-width: 1200px) {
+    @media screen and (min-width: 375px) and (max-width: 668px) {
       float: left;
     }
   }

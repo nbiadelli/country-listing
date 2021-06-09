@@ -46,7 +46,7 @@ a {
     margin-top: 35px;
     grid-gap: 30px;
     grid-template-columns: 2fr 2fr 2fr 2fr;
-    @media screen and (min-width: 375px) and (max-width: 1440px) {
+    @media screen  and (max-width: 1440px) {
       grid-template-columns: repeat(auto-fit, minmax(267px, 2fr));
     }
   }
