@@ -42,8 +42,34 @@ input {
   display: none;
 }
 
+button {
+  background-color: var(--body-white);
+  border: none;
+  color: var(--body-color);
+  position: relative;
+  top: 2px;
+  left: 51px;
+  cursor: pointer;
+
+  img {
+    width: 22px;
+    position: relative;
+    top: 8px;
+    padding-right: 7px;
+  }
+}
+
+button:focus {
+  outline: none;
+}
+
+@media screen and (min-width: 375px) and (max-width: 1200px) {
+  button {
+    left: 0;
+  }
+}
+
 @media screen and (min-width: 1440px) {
-  
   header {
     display: grid;
     grid-template-columns: 10fr 2fr;
@@ -59,25 +85,5 @@ input {
       font-weight: 800;
     }
   }
-}
-
-button {
-  background-color: var(--body-white);
-  border: none;
-  color: var(--body-color);
-  position: relative;
-  top: 2px;
-  cursor: pointer;
-
-  img {
-    width: 22px;
-    position: relative;
-    top: 8px;
-    padding-right: 7px;
-  }
-}
-
-button:focus {
-  outline: none;
 }
 </style>

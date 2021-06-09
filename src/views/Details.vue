@@ -131,7 +131,7 @@ export default {
       padding-right: 7px;
     }
   }
-  
+
   a {
     text-decoration: none;
   }

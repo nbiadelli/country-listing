@@ -21,7 +21,7 @@
     </div>
     <div>
       <select @change="filter" v-model="searchSelect">
-        <option disabled selected>Filter by Region</option>
+        <option value="" disabled selected hidden>Filter by Region</option>
         <option>Africa</option>
         <option>America</option>
         <option>Asia</option>
@@ -82,11 +82,10 @@ export default {
     grid-template-columns: repeat(auto-fit, minmax(267px, 2fr));
   }
   margin-left: 10px;
-  
+
   .container-input {
     display: grid;
     grid-template-columns: 1px 242px;
-    grid-gap: 2px;
     .icon-input {
       margin-top: 10px;
       padding-left: 10px;

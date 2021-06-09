@@ -1,5 +1,5 @@
 import { createStore } from "vuex";
-import axios from 'axios';
+import axios from "axios";
 
 export default createStore({
   state: {
@@ -10,7 +10,8 @@ export default createStore({
   },
   actions: {
     actionGetCountry({ commit }) {
-      axios.get('https://restcountries.eu/rest/v2/all')
+      axios
+        .get("https://restcountries.eu/rest/v2/all")
         .then(function (response) {
           commit("setList", response.data);
         })
@@ -25,25 +26,27 @@ export default createStore({
       state.listCountry = payload;
     },
     setSearchInput(state, payload) {
-      state.searchSelect = "",
-        state.searchInput = payload;
+      (state.searchSelect = ""), (state.searchInput = payload);
     },
     setSearchSelect(state, payload) {
-      state.searchInput = "",
-        state.searchSelect = payload;
+      (state.searchInput = ""), (state.searchSelect = payload);
     },
   },
 
   getters: {
     filter(state) {
       if (state.searchSelect) {
-        const filteredList = state.listCountry.filter((item) => state.searchSelect === item.region);
+        const filteredList = state.listCountry.filter(
+          (item) => state.searchSelect === item.region
+        );
         return filteredList;
       } else {
         const rg = new RegExp(state.searchInput, "ig");
-        const filteredList = state.listCountry.filter((item) => rg.test(item.name));
+        const filteredList = state.listCountry.filter((item) =>
+          rg.test(item.name)
+        );
         return filteredList;
       }
     },
-  }
+  },
 });
