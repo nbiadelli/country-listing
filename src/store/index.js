@@ -17,9 +17,6 @@ export default createStore({
         .catch(function (error) {
           // handle error
           console.log(error);
-        })
-        .then(function () {
-          // always executed
         });
     },
   },
@@ -28,22 +25,25 @@ export default createStore({
       state.listCountry = payload;
     },
     setSearchInput(state, payload) {
-      state.searchInput = payload;
+      state.searchSelect = "",
+        state.searchInput = payload;
     },
     setSearchSelect(state, payload) {
-      state.searchSelect = payload;
+      state.searchInput = "",
+        state.searchSelect = payload;
     },
   },
-  getters: {
-    filterInput(state) {
-      const rg = new RegExp(state.searchInput, "ig");
-      const filteredList = state.listCountry.filter((item) => rg.test(item.name));
-      return filteredList;
-    },
 
-    filterSelect(state) {
-      const filteredList = state.listCountry.filter((item) =>  state.searchSelect === item.region);
-      return filteredList;
+  getters: {
+    filter(state) {
+      if (state.searchSelect) {
+        const filteredList = state.listCountry.filter((item) => state.searchSelect === item.region);
+        return filteredList;
+      } else {
+        const rg = new RegExp(state.searchInput, "ig");
+        const filteredList = state.listCountry.filter((item) => rg.test(item.name));
+        return filteredList;
+      }
     },
   }
 });

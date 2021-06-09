@@ -13,7 +13,8 @@ $widthDesktop: 1440px;
 
 $lightBlue: hsl(209, 23%, 22%);
 $mediumBlue: hsl(200, 15%, 8%);
-$darkBlue: hsl(200, 15%, 8%);
+$darkBlue: hsl(207, 26%, 17%);
+$gray: #e8e0e042;
 $lightGray: hsl(0, 0%, 98%);
 $mediumGray: hsl(0, 0%, 52%);
 $white: hsl(0, 0%, 100%);
@@ -21,9 +22,13 @@ $white: hsl(0, 0%, 100%);
 :root {
   --body-bg: hsl(0, 0%, 98%);
   --body-color: hsl(200, 15%, 8%);
+  --body-white:  hsl(0, 0%, 100%);
+  --body-grey:  #e8e0e042;
 }
 
 .dark-mode:root {
-  --body-bg: hsl(200, 15%, 8%);
+  --body-bg: hsl(207, 26%, 17%);
   --body-color: hsl(0, 0%, 100%);
+  --body-gray:  hsl(200, 15%, 8%);
+  --body-white:hsl(207, 26%, 17%);
 }
